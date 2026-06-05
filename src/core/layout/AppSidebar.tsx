@@ -199,31 +199,8 @@ export function AppSidebar({ drawerWidth, mobileOpen, onMobileClose, isMobile, d
 
       <Divider />
 
-      {/* User footer */}
-      <Box sx={{ px: 2, py: 1.5, display: 'flex', alignItems: 'center', gap: 1.5 }}>
-        <Avatar
-          sx={{
-            width: 34,
-            height: 34,
-            bgcolor: '#2563EB',
-            fontSize: 13,
-            fontWeight: 700,
-            flexShrink: 0,
-          }}
-        >
-          {initials}
-        </Avatar>
-        <Box sx={{ flexGrow: 1, minWidth: 0 }}>
-          <Typography
-            sx={{ fontSize: 13, fontWeight: 600, color: textPrimary, lineHeight: 1.2 }}
-            noWrap
-          >
-            {user?.nombre}
-          </Typography>
-          <Typography sx={{ fontSize: 11, color: '#2563EB' }}>
-            {getRolLabel(user?.rol as UserRole)}
-          </Typography>
-        </Box>
+      {/* Logout */}
+      <Box sx={{ px: 2, py: 1.5, display: 'flex', justifyContent: 'center' }}>
         <Tooltip title="Cerrar sesión">
           <Box
             onClick={handleLogout}
@@ -232,13 +209,16 @@ export function AppSidebar({ drawerWidth, mobileOpen, onMobileClose, isMobile, d
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              p: 0.5,
+              gap: 1,
+              px: 2,
+              py: 1,
               borderRadius: 1,
               '&:hover': { color: '#DC2626', backgroundColor: 'rgba(220,38,38,0.06)' },
               transition: 'all 0.15s',
             }}
           >
             <LogoutOutlinedIcon sx={{ fontSize: 18 }} />
+            <Typography sx={{ fontSize: 13, fontWeight: 500 }}>Cerrar Sesión</Typography>
           </Box>
         </Tooltip>
       </Box>
