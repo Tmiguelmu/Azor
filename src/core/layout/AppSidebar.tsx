@@ -197,31 +197,6 @@ export function AppSidebar({ drawerWidth, mobileOpen, onMobileClose, isMobile, d
         ))}
       </Box>
 
-      <Divider />
-
-      {/* Logout */}
-      <Box sx={{ px: 2, py: 1.5, display: 'flex', justifyContent: 'center' }}>
-        <Tooltip title="Cerrar sesión">
-          <Box
-            onClick={handleLogout}
-            sx={{
-              color: textSecondary,
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 1,
-              px: 2,
-              py: 1,
-              borderRadius: 1,
-              '&:hover': { color: '#DC2626', backgroundColor: 'rgba(220,38,38,0.06)' },
-              transition: 'all 0.15s',
-            }}
-          >
-            <LogoutOutlinedIcon sx={{ fontSize: 18 }} />
-            <Typography sx={{ fontSize: 13, fontWeight: 500 }}>Cerrar Sesión</Typography>
-          </Box>
-        </Tooltip>
-      </Box>
     </Box>
   )
 
