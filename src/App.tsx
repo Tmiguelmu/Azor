@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import { ThemeProvider, CssBaseline } from '@mui/material'
 import { Toaster } from 'react-hot-toast'
 import { useAppSelector } from './store'
@@ -14,11 +14,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter>
+      <HashRouter>
         <AuthProvider>
           <AppRouter />
         </AuthProvider>
-      </BrowserRouter>
+      </HashRouter>
       <Toaster
         position="top-right"
         toastOptions={{
