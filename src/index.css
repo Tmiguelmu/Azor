@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica', 'Arial', sans-serif;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F8FAFC;
+}
+
+/* Scrollbar moderno */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(37, 99, 235, 0.25);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(37, 99, 235, 0.5);
+}
+
+/* Animaciones globales */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.fade-in {
+  animation: fadeIn 0.25s ease-out both;
+}
+
+.scale-in {
+  animation: scaleIn 0.2s ease-out both;
+}
+
+/* Print */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; }
+}
+
+/* ---- RESPONSIVE ---- */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .MuiDrawer-paper {
+    position: fixed !important;
+    z-index: 1200 !important;
+  }
+
+  .MuiDialog-paper {
+    margin: 8px !important;
+    width: calc(100vw - 16px) !important;
+    max-width: calc(100vw - 16px) !important;
+    max-height: calc(100vh - 16px) !important;
+  }
+
+  .MuiTableCell-root {
+    padding: 10px 8px !important;
+    font-size: 0.85rem !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  html, body, #root {
+    font-size: 14px;
+  }
+
+  .MuiDialog-paper {
+    margin: 4px !important;
+    width: calc(100vw - 8px) !important;
+    max-width: calc(100vw - 8px) !important;
+    border-radius: 8px !important;
+  }
+
+  .MuiCard-root {
+    border-radius: 8px !important;
+  }
+
+  .MuiTableContainer-root {
+    overflow-x: auto !important;
+  }
+
+  .MuiTableCell-head {
+    font-size: 0.75rem !important;
+    padding: 8px 6px !important;
+    white-space: nowrap !important;
+  }
+
+  .MuiTableCell-body {
+    font-size: 0.82rem !important;
+    padding: 8px 6px !important;
+  }
+
+  .MuiChip-root {
+    height: 26px !important;
+    font-size: 0.75rem !important;
+  }
+}

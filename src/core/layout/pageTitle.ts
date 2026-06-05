@@ -1,0 +1,16 @@
+export function getPageTitle(pathname: string): string {
+  if (pathname.startsWith('/ordenes/')) return 'Detalle de Orden'
+  if (pathname === '/ordenes') return 'Órdenes de Trabajo'
+  if (pathname === '/dashboard') return 'Dashboard'
+  if (pathname === '/tareas') return 'Gestión de Tareas'
+  if (pathname === '/mis-tareas') return 'Mis Tareas'
+  if (pathname === '/tareas-validar') return 'Tareas por Validar'
+  if (pathname === '/inventario') return 'Inventario'
+  if (pathname === '/inventario/movimientos') return 'Movimientos de Inventario'
+  if (pathname === '/clientes') return 'Catálogo de Clientes'
+  if (pathname === '/servicios') return 'Catálogo de Servicios'
+  if (pathname === '/catalogos') return 'Catálogos'
+  if (pathname === '/usuarios') return 'Gestión de Usuarios'
+  if (pathname === '/reportes') return 'Reportes'
+  return 'Azor'
+}
